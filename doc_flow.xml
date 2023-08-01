@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><Component xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" componentId="93193bca-9529-474b-a72b-6b9af924fd48" createdBy="rkhalilov@purestorage.com" createdDate="2023-07-25T10:50:34Z" currentVersion="true" deleted="false" folderFullPath="Training-Ravil-Khalilov/Arch 1/1 - Arch Overview/Document Flow Activity 1" folderId="Rjo2MDMyMTIz" folderName="Document Flow Activity 1" modifiedBy="rkhalilov@purestorage.com" modifiedDate="2023-07-25T11:22:04Z" name="Document Flow Activity 1" type="process" version="6">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <process allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" updateRunDates="true" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="64.0" y="206.0">
+          <configuration>
+            <noaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape3" x="176.0" y="216.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="message_icon" name="shape3" shapetype="message" userlabel="Load Test CSV" x="192.0" y="208.0">
+          <configuration>
+            <message combined="true">
+              <msgTxt>Sequence,Loc_Code,Loc_Name,Prod_Code,Prod_Name,Ser_No,Operational?
+1,301,Able Ranch,F-88,Finned Inverter,7788901,TRUE
+2,404,Beta Ridge,F-89,Finned Inverter,7788902,TRUE
+3,301,Able Ranch,G-45,Open Grinder,6655431,TRUE
+4,301,Able Ranch,G-45,Open Grinder,6655404,FALSE
+5,404,Beta Ridge,R-12,Flat Return,3344789,FALSE
+6,550,Candy Mountain,R-12,Flat Return,3344793,TRUE
+7,301,Able,F-89,Finned Inverter,6655543,FALSE
+8,550,Candy Mountain,G-45,Open Grinder,6655661,TRUE</msgTxt>
+              <msgParameters/>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape8" x="304.0" y="216.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="decision_icon" name="shape5" shapetype="decision" userlabel="Operational?" x="816.0" y="208.0">
+          <configuration>
+            <decision comparison="equals" name="Operational?">
+              <decisionvalue valueType="profile">
+                <profileelement elementId="16" elementName="Operational? (Migration/Elements/Operational?)" profileId="c261c13a-fd0b-48e5-967f-e293a8d6214e" profileType="profile.flatfile"/>
+              </decisionvalue>
+              <decisionvalue valueType="static">
+                <staticparameter staticproperty="TRUE"/>
+              </decisionvalue>
+            </decision>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="true" name="shape5.dragpoint1" text="True" toShape="shape6" x="1040.0" y="136.0"/>
+            <dragpoint identifier="false" name="shape5.dragpoint2" text="False" toShape="shape9" x="1040.0" y="312.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="map_icon" name="shape6" shapetype="map" userlabel="" x="1056.0" y="128.0">
+          <configuration>
+            <map mapId="37de9cfa-8911-449e-8951-b98942f72b40"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape12" x="1184.0" y="136.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape7" shapetype="stop" userlabel="" x="1344.0" y="128.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="documentproperties_icon" name="shape8" shapetype="documentproperties" userlabel="Initialize" x="320.0" y="208.0">
+          <configuration>
+            <documentproperties>
+              <documentproperty defaultValue="" isTradingPartner="false" name="Dynamic Process Property - P_Map_Counter" persist="false" propertyId="process.P_Map_Counter">
+                <sourcevalues>
+                  <parametervalue key="1" valueType="static">
+                    <staticparameter staticproperty="0"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+              <documentproperty defaultValue="" isTradingPartner="false" name="Dynamic Process Property - P_Step_Counter" persist="false" propertyId="process.P_Step_Counter">
+                <sourcevalues>
+                  <parametervalue key="2" valueType="static">
+                    <staticparameter staticproperty="0"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape8.dragpoint1" toShape="shape13" x="448.0" y="216.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="documentproperties_icon" name="shape9" shapetype="documentproperties" userlabel="Increment" x="1056.0" y="304.0">
+          <configuration>
+            <documentproperties>
+              <documentproperty defaultValue="" isTradingPartner="false" name="Dynamic Process Property - P_Step_Counter" persist="false" propertyId="process.P_Step_Counter">
+                <sourcevalues>
+                  <parametervalue key="2" valueType="process">
+                    <processparameter processproperty="P_Step_Counter" processpropertydefaultvalue=""/>
+                  </parametervalue>
+                  <parametervalue key="1" valueType="static">
+                    <staticparameter staticproperty="1"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape9.dragpoint1" toShape="shape11" x="1200.0" y="312.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape10" shapetype="stop" userlabel="" x="1344.0" y="304.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="notify_icon" name="shape11" shapetype="notify" userlabel="" x="1216.0" y="304.0">
+          <configuration>
+            <notify disableEvent="true" enableUserLog="false" perExecution="false" title="">
+              <notifyMessage>Step Document Counter: {1}
+---
+</notifyMessage>
+              <notifyMessageLevel>WARNING</notifyMessageLevel>
+              <notifyParameters>
+                <parametervalue key="0" valueType="process">
+                  <processparameter processproperty="P_Step_Counter" processpropertydefaultvalue=""/>
+                </parametervalue>
+              </notifyParameters>
+            </notify>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape11.dragpoint1" toShape="shape10" x="1328.0" y="312.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="notify_icon" name="shape12" shapetype="notify" userlabel="" x="1200.0" y="128.0">
+          <configuration>
+            <notify disableEvent="true" enableUserLog="false" perExecution="false" title="">
+              <notifyMessage>Map Document Counter: {1}
+---
+</notifyMessage>
+              <notifyMessageLevel>WARNING</notifyMessageLevel>
+              <notifyParameters>
+                <parametervalue key="0" valueType="process">
+                  <processparameter processproperty="P_Map_Counter" processpropertydefaultvalue=""/>
+                </parametervalue>
+              </notifyParameters>
+            </notify>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape12.dragpoint1" toShape="shape7" x="1328.0" y="136.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="dataprocess_icon" name="shape13" shapetype="dataprocess" userlabel="" x="464.0" y="208.0">
+          <configuration>
+            <dataprocess>
+              <step index="1" key="1" name="Split Documents" processtype="8">
+                <documentsplit profileType="ff">
+                  <SplitOptions>
+                    <FFOptions headersOption="retain" profileId="c261c13a-fd0b-48e5-967f-e293a8d6214e" splitOption="split_line"/>
+                  </SplitOptions>
+                </documentsplit>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape13.dragpoint1" toShape="shape14" x="624.0" y="216.0"/>
+          </dragpoints>
+        </shape>
+        <shape image="flowcontrol_icon" name="shape14" shapetype="flowcontrol" userlabel="" x="640.0" y="208.0">
+          <configuration>
+            <flowcontrol chunkStyle="threadOnly" chunks="0" forEachCount="1"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape14.dragpoint1" toShape="shape5" x="800.0" y="216.0"/>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</Component>

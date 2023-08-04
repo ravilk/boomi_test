@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><Component xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" componentId="93193bca-9529-474b-a72b-6b9af924fd48" createdBy="rkhalilov@purestorage.com" createdDate="2023-07-25T10:50:34Z" currentVersion="true" deleted="false" folderFullPath="Training-Ravil-Khalilov/Arch 1/1 - Arch Overview/Document Flow Activity 1" folderId="Rjo2MDMyMTIz" folderName="Document Flow Activity 1" modifiedBy="rkhalilov@purestorage.com" modifiedDate="2023-08-03T09:35:16Z" name="Document Flow Activity 1" type="process" version="10">
+<?xml version="1.0" encoding="UTF-8"?>
+<Component xmlns:bns="http://api.platform.boomi.com/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" componentId="93193bca-9529-474b-a72b-6b9af924fd48" createdBy="rkhalilov@purestorage.com" createdDate="2023-07-25T10:50:34Z" currentVersion="true" deleted="false" folderFullPath="Training-Ravil-Khalilov/Arch 1/1 - Arch Overview/Document Flow Activity 1" folderId="Rjo2MDMyMTIz" folderName="Document Flow Activity 1" modifiedBy="rkhalilov@purestorage.com" modifiedDate="2023-08-04T13:11:06Z" name="Document Flow Activity 1" type="process" version="12">
   <bns:encryptedValues/>
   <bns:description/>
   <bns:object>
@@ -114,7 +116,7 @@
             <notify disableEvent="true" enableUserLog="false" perExecution="false" title="">
               <notifyMessage>Step Document Counter: {1}
 ---
-</notifyMessage>
+              </notifyMessage>
               <notifyMessageLevel>WARNING</notifyMessageLevel>
               <notifyParameters>
                 <parametervalue key="0" valueType="process">
@@ -132,7 +134,7 @@
             <notify disableEvent="true" enableUserLog="false" perExecution="false" title="">
               <notifyMessage>Map Document Counter: {1}
 ---
-</notifyMessage>
+              </notifyMessage>
               <notifyMessageLevel>WARNING</notifyMessageLevel>
               <notifyParameters>
                 <parametervalue key="0" valueType="process">

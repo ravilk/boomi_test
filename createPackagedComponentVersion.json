@@ -1,8 +1,8 @@
 {
-  "componentId" : "${componentId}",
-  "componentVersion" : "${componentVersion}",
-  "packageVersion" : "${packageVersion}",
-  "componentType" : "${componentType}",
-  "notes" : "${notes}",
+  "componentId": "93193bca-9529-474b-a72b-6b9af924fd48",
+  "componentVersion": "15",
+  "packageVersion": "1.0",
+  "componentType": "process",
+  "notes": "${notes}",
   "createdDate": "${createdDate}"
 }

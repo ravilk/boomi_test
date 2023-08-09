@@ -1,6 +1,5 @@
 {
   "componentId" : "${componentId}",
-  "componentVersion" : "${componentVersion}",
   "packageVersion" : "${packageVersion}",
   "componentType" : "${componentType}",
   "notes" : "${notes}",

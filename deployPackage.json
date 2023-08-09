@@ -1,6 +1,6 @@
 {
-  "environmentId" : "${envId}",
-  "packageId" : "${packageId}",
-  "componentType" : "${componentType}",
-  "notes" : "${notes}"
+  "environmentId": "Test",
+  "packageId": "1.0",
+  "componentType": "process",
+  "notes": "${notes}"
 }

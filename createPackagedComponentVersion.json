@@ -1,14 +1,12 @@
 {
-    "pipelines": [
-        {
-            "job": "Create Packaged Component",
-            "env": "Test",
-            "componentId": "93193bca-9529-474b-a72b-6b9af924fd48",
-            "componentVersion": "15",
-            "packageVersion": "1.0",
-            "componentType": "process",
-            "notes": "Document Flow Activity 1",
-            "listenerStatus": "RUNNING"
-        }
-    ]
+    "pipelines": [{
+      "job": "Create Packaged Component",
+       "env": "Test",
+       "componentId": "93193bca-9529-474b-a72b-6b9af924fd48",
+       "componentVersion": "15",
+       "packageVersion": "1.0",
+       "componentType": "process",
+       "notes": "Document Flow Activity 1",
+       "listenerStatus": "RUNNING"
+    }]
 }

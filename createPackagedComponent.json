@@ -1,0 +1,15 @@
+{
+  "pipelines": [
+    {
+      "job": "93193bca-9529-474b-a72b-6b9af924fd48",
+      "env": "Test",
+      "componentId": "93193bca-9529-474b-a72b-6b9af924fd48",
+      "packageVersion": "1.0",
+      "componentType": "process",
+      "componentVersion": "",
+      "notes": "Create Package Template",
+      "extractComponentXmlFolder": "/tmp",
+      "tag": "True"
+    }
+  ]
+}
